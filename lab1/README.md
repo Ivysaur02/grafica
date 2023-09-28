@@ -1,4 +1,4 @@
-[![Build, Test](https://github.com/Ivysaur02/grafica/actions/workflows/ci.yml/badge.svg)](https://github.com/Ivysaur02/grafica/actions/workflows/ci.yml)
+[![Build, Test](https://github.com/Ivysaur02/grafica/actions/workflows/ci.yml/badge.svg)](https://github.com/Ivysaur02/grafica/actions/workflows/ci.yml)  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/Ivysaur02/grafica/blob/master/LICENSE)
 
 
 # Графика
@@ -59,3 +59,4 @@
 ## Благодарности
 
 - [Учебное пособие по Python Tkinter] (https://www.tutorialspoint.com/python/python_gui_programming.htm)
+- [OpenAi за бота] который скушал шаблон и помог мне это сделать и не вскрыться
