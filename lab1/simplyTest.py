@@ -2,6 +2,7 @@ import unittest
 from tkinter import *
 from main import create_oval, move_oval
 
+
 class TestOval(unittest.TestCase):
     def setUp(self):
         self.root = Tk()
@@ -26,6 +27,7 @@ class TestOval(unittest.TestCase):
 
     def tearDown(self):
         self.root.destroy()
+
 
 if __name__ == '__main__':
     unittest.main()

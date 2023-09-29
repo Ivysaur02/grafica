@@ -22,5 +22,5 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
       - name: Run tests
-        run: python -m unittest -v lab1/simplyTest.py
+        run: python lab1/simplyTest.py
 
