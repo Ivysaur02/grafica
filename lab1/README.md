@@ -61,4 +61,3 @@
 - [Учебное пособие по Python Tkinter] (https://www.tutorialspoint.com/python/python_gui_programming.htm)
 - [OpenAi за бота] который скушал шаблон и помог мне это сделать и не вскрыться
 
-![image](https://github.com/Ivysaur02/grafica/blob/master/lab1/docim/sosiska.gif)
