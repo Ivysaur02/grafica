@@ -1,4 +1,4 @@
-from tkinter import Tk, Canvas
+from tkinter import Tk, Canvas, Label, Toplevel, Menu
 
 
 class Ball:
@@ -101,6 +101,36 @@ def get_user_input():
     return canvas_width, canvas_height, vx, vy, color, radius
 
 
+def open_help_window():
+    """
+    Открывает модальное окно с содержимым файла help.txt.
+    """
+    with open("util/help.txt") as f:
+        help_text = f.read()
+    help_window = Toplevel(root)
+    help_window.title("Справка")
+    help_window.geometry("400x300")
+    help_window.grab_set()
+    help_label = Label(help_window, text=help_text)
+    help_label.pack()
+    help_window.wait_window()
+
+
+def open_version_window():
+    """
+    Открывает модальное окно с версией программы.
+    """
+    with open("util/version.txt") as f:
+        version_text = f.read()
+    version_window = Toplevel(root)
+    version_window.title("Версия программы")
+    version_window.geometry("200x100")
+    version_window.grab_set()
+    version_label = Label(version_window, text=version_text)
+    version_label.pack()
+    version_window.wait_window()
+
+
 if __name__ == "__main__":
     canvas_width, canvas_height, vx, vy, color, radius = get_user_input()
 
@@ -109,9 +139,21 @@ if __name__ == "__main__":
     canvas = Canvas(root, width=canvas_width, height=canvas_height)
     canvas.pack()
 
+    menubar = Menu(root)
+    root.config(menu=menubar)
+
+    help_menu = Menu(menubar, tearoff=0)
+    help_menu.add_command(label="Справка", command=open_help_window)
+    menubar.add_cascade(label="Справка", menu=help_menu)
+
+    version_menu = Menu(menubar, tearoff=0)
+    version_menu.add_command(label="Версия", command=open_version_window)
+    menubar.add_cascade(label="О программе", menu=version_menu)
+
     x1, y1, x2, y2 = 0, 0, canvas_width, canvas_height
     canvas.create_line(x1, y1, x2, y1, x2, y2, x1, y2, x1, y1)
 
     canvas.bind('<Button-1>', on_click)
+    root.title("Lab 2")
 
     root.mainloop()

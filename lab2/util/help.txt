@@ -1,0 +1,3 @@
+1. A white canvas will appear on the screen. By clicking the left mouse button you can place the ball on the canvas.
+  (you can only create 1 ball)
+2. Press the ESC key to exit the program.
