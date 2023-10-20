@@ -80,3 +80,7 @@ class TestGetUserInput(unittest.TestCase):
         self.assertEqual(vy, 2)
         self.assertEqual(color, 'blue')
         self.assertEqual(radius, 20)
+
+
+if __name__ == '__main__':
+    unittest.main()
