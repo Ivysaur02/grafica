@@ -19,12 +19,12 @@ class TestEarthModel(unittest.TestCase):
 
     def test_load_texture(self):
         """Проверяет корректную загрузку текстуры."""
-        texture = self.earth.load_texture("earth_texture.jpg")
+        texture = self.earth.load_texture()
         self.assertIsNotNone(texture, "Текстура не была загружена")
 
     def test_draw_sphere(self):
         """Проверяет корректную отрисовку сферы."""
-        texture = self.earth.load_texture("earth_texture.jpg")
+        texture = self.earth.load_texture()
         self.earth.draw_sphere(1, texture)
         self.assertIsNotNone(pygame.display.get_surface(), "Окно не было создано")
         self.assertIsNotNone(

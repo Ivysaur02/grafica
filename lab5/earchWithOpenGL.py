@@ -17,7 +17,7 @@ RADIUS_SPHERE = 1
 class EarthModel:
     """Класс EarthModel, используемый для создания приложения OpenGL. Показывает вращающуюся сферу с текстурой земли """
 
-    def __init__(self, window_width=800, window_height=600, texture_path="earth_texture.jpg"):
+    def __init__(self, window_width=800, window_height=600, texture_path="lab5/img/earth_texture.jpg"):
         self.window_width = window_width
         self.window_height = window_height
         self.texture_path = texture_path
@@ -49,10 +49,10 @@ class EarthModel:
         glMatrixMode(GL_MODELVIEW)
         glLoadIdentity()
 
-    def load_texture(self, filename):
+    def load_texture(self):
         """Загрузка текстуры."""
         # Загрузка изображения из файла с использованием библиотеки PIL
-        img = Image.open(filename)
+        img = Image.open(self.texture_path)
         img_data = numpy.array(list(img.getdata()), numpy.uint8)
         # Генерация идентификатора текстуры
         texture = glGenTextures(1)
@@ -96,7 +96,7 @@ class EarthModel:
 
     def main_loop(self):
         """Основной цикл приложения."""
-        texture = self.load_texture(self.texture_path)
+        texture = self.load_texture()
         while True:
             self.handle_events()
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
