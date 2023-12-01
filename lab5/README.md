@@ -1,6 +1,5 @@
 [![Build, Test](https://github.com/Ivysaur02/grafica/actions/workflows/ci.yml/badge.svg)](https://github.com/Ivysaur02/grafica/actions/workflows/ci.yml)  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/Ivysaur02/grafica/blob/master/LICENSE)
 
-
 # Графика
 
 #### Лабораторная работа 5 (OpenGL) — это программа Python, которая изображает вращающуюся планету Земля.
@@ -17,7 +16,6 @@
 - pillow
 - numpy
 
-
 ## Установка
 
 1. Клонируйте репозиторий или скачайте исходный код.
@@ -25,15 +23,19 @@
     git clone https://github.com/Ivysaur02/grafica.git
     ```
 2. Установите Python 3.11 с официального сайта.
-3. Установите библиотеку Tkinter, выполнив в терминале следующую команду:
+3. Установите библиотеки, выполнив в терминале следующую команду:
 
-    ```
-    pip install tkinter   
+    ``` 
     pip install pygame
     pip install PyOpenGL PyOpenGL_accelerate
     pip install pillow
     pip install numpy
     ```
+   Можно воспользоваться альтернативным способов установок библиотек при помощи файла зависимостей
+
+   ```
+   pip install -r requirements.txt
+   ```
 
 ## Использование
 
@@ -45,6 +47,7 @@
     ```
 
 3. Наслаждайтесь
+
 ## Функции
 
 - Кривая земля крутиться
